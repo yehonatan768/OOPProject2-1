@@ -1,4 +1,4 @@
-In this project we are going to create file with random number of lines, and count them using 3 ways:
+In this project we are going to create files with random number of lines, and count them using 3 ways:
 
 1.Using the normal way which is less efficient: Iterating over the files and counting line by line and finally returning the answer, without using Threads.
 
