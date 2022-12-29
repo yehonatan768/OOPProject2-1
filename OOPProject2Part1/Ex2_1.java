@@ -43,9 +43,8 @@ public class Ex2_1 {
         int sum = 0;
         for (int i = 0; i < fileNames.length; i++) {
             section_3 s3 = new section_3(fileNames[i]);
-            Thread t = new Thread(s3,"Sec3Thread");
-            t.start();
-            t.join();
+            s3.start();
+            s3.join();
             sum+=s3.getCount_rows();
         }
         return sum;
