@@ -30,3 +30,5 @@ Finally, if the number of threads is too large, then it can lead to resource con
 Overall, using threads can be a useful technique for improving the performance of certain types of tasks,
 
 but it is important to consider the specific characteristics of the task and the resources available when deciding whether and how to use threads.
+
+![UML](https://user-images.githubusercontent.com/85311237/210644775-3271a34e-286f-4cd8-b713-6542796c4e9d.png)
