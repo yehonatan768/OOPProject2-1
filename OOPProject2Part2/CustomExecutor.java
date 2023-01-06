@@ -35,7 +35,7 @@ public class CustomExecutor {
 
         maxPriority = Math.max(maxPriority, task.prio);
 
-       return executor.submit(task);
+       return this.submit(task);
     }
 
     // Method for creating a Task instance from a Callable and submitting it
@@ -45,7 +45,7 @@ public class CustomExecutor {
 
         maxPriority = Math.max(maxPriority, task.prio);
 
-         return executor.submit(task);
+         return this.submit(task);
     }
 
     // Method for returning the maximum priority in the queue in O(1) time and space complexity
