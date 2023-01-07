@@ -21,14 +21,16 @@ public class Ex2 {
         totalTime= endTime - startTime;
         System.out.println("Total time for first function is: " + totalTime/1000000000.0);
 
+        Ex2_1 x = new Ex2_1();
+
         startTime = System.nanoTime();
-        Ex2_1.getNumOfLinesThreads(arr);
+        x.getNumOfLinesThreads(arr);
         endTime = System.nanoTime();
         totalTime = endTime - startTime;
         System.out.println("Total time for second function is: " + totalTime/1000000000.0);
 
         startTime = System.nanoTime();
-        Ex2_1.getNumOfLinesThreadPool(arr);
+        x.getNumOfLinesThreadPool(arr);
         endTime = System.nanoTime();
         totalTime = endTime - startTime;
         System.out.println("Total time for third function is: " + totalTime/1000000000.0);

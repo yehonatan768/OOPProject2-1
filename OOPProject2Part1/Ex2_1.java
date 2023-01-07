@@ -39,7 +39,7 @@ public class Ex2_1 {
         }
         return count_rows;
     }
-    public static int getNumOfLinesThreads(String[] fileNames) throws InterruptedException {
+    public int getNumOfLinesThreads(String[] fileNames) throws InterruptedException {
         int sum = 0;
         for (int i = 0; i < fileNames.length; i++) {
             section_3 s3 = new section_3(fileNames[i]);
@@ -49,7 +49,7 @@ public class Ex2_1 {
         }
         return sum;
     }
-    public static int getNumOfLinesThreadPool(String[] fileNames) throws ExecutionException, InterruptedException {
+    public int getNumOfLinesThreadPool(String[] fileNames) throws ExecutionException, InterruptedException {
         int sum = 0;
         ExecutorService executor = Executors.newFixedThreadPool(fileNames.length);
         for (int i = 0; i < fileNames.length; i++) {
