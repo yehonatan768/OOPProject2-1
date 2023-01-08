@@ -41,25 +41,29 @@ public class Ex2_1 {
     }
     public int getNumOfLinesThreads(String[] fileNames) throws InterruptedException {
         int sum = 0;
+        section_3[] array = new section_3 [fileNames.length];
         for (int i = 0; i < fileNames.length; i++) {
-            section_3 s3 = new section_3(fileNames[i]);
-            s3.start();
-            s3.join();
-            sum+=s3.getCount_rows();
+            array[i] = new section_3(fileNames[i]);
+            array[i].start();
+        }
+        for (int i = 0; i < array.length; i++) {
+            array[i].join();
+            sum+=array[i].getCount_rows();
         }
         return sum;
     }
     public int getNumOfLinesThreadPool(String[] fileNames) throws ExecutionException, InterruptedException {
         int sum = 0;
         ExecutorService executor = Executors.newFixedThreadPool(fileNames.length);
+        Future<Integer> [] futures = new Future[fileNames.length];
         for (int i = 0; i < fileNames.length; i++) {
             section_4 s4 = new section_4(fileNames[i]);
-            Future<Integer> future = executor.submit(s4);
-            sum+=future.get();
+            futures[i] = executor.submit(s4);
+        }
+        for (int i = 0; i < futures.length; i++) {
+            sum+=futures[i].get();
         }
         executor.shutdown();
         return sum;
     }
-
-
 }
