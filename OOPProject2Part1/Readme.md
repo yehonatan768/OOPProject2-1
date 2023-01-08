@@ -11,7 +11,7 @@ In the first part of the project I created 1000 files, with a random number of l
 
 Turned out, it took for the first function much more time to run compared to the last two functions, to be exact, 1.5077061 seconds, whereas the last two functions
 
-took 0.6815452 second , 0.7497736 seconds respectively, which are roughly the same.
+took 0.1877415 second ,0.1411917 seconds respectively, we can notice that the ThreadPool is slightly faster than using normal threads.
 
 The reason is that using threads to count the number of lines in a certain number of files can be faster than using a single thread
 
