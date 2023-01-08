@@ -12,7 +12,7 @@ public class Task<T> implements Callable<T>,Comparable<Task<T>>{
     public Task(Callable<T> operation)
     {
         this.operation = operation;
-        this.prio = 3;
+        this.prio = 1;
     }
 
     public static Task createTask(Callable operation,TaskType type)
