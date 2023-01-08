@@ -29,9 +29,9 @@ public class CustomExecutor {
     }
 
     // Method for creating a Task instance from a Callable and submitting it
-    public <T> Future<T> submit(Callable<T> callable, TaskType type) {
+    public <T> Future<T> submit(Callable<T> callable, TaskType taskType) {
 
-        Task<T> task = new Task<>(callable, type);
+        Task<T> task = new Task<>(callable, taskType);
 
         maxPriority = Math.max(maxPriority, task.prio);
 
